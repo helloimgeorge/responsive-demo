@@ -4,9 +4,55 @@
 body {
     font-family: 'Arimo', 'Helvetica Neue', Helvetica, sans-serif;
     font-size: 16px;
+    padding-bottom: 50px; /* TODO change fixed footer only to small screens */
 }
 
 h1, h2, h3, h4, .lead {
     font-family: 'Satisfy', Helvetica, sans-serif;
 }
 
+.special {
+    background-color: #EEA000;
+}
+
+.motto {
+    display: none;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    padding: 0.5em;
+    margin-right: 0.5em;
+}
+
+footer {
+    position: fixed; /* TODO change fixed footer only to small screens */
+    bottom: 0;
+    left: 0;
+    background-color: #EDEDED;
+}
+
+@media (min-width: 768px) {
+    .motto {
+        display: inline;
+    }
+
+    body {
+        font-size: 18px;
+    }
+
+    header {
+        position: relative;
+    }
+
+    nav {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+} /* END for screens 768px and bigger */
